@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>2048</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+  <div class="container">
+    
+    <div class="headings">
+      <div class="logo">
+        <div>
+          <h1 class="title">20</h1>
+
+        </div>
+        <div>
+          <h1 class="title">48</h1>
+        </div>
+        
+    </div>
+      <div class="score">
+        <div class="scores-container" id="score-holder">0</div>
+        <div class="best-container" id="best-holder">0</div>
+      </div>
+    </div>
+
+    <div class="game-intro">
+      <h2 class="subtitle">
+        Play
+        <strong><span style="text-decoration:underline; margin:.2em; color:#f67c5f;">2048</span>Game</strong>
+        Online
+      </h2>
+      <a class="restart-button" id="restart">New Game</a>
+    </div>
+
+    <div class="above-game">
+      <p>Join the numbers and get to the <strong>2048 tile!</strong></p>
+    </div>
+
+    <div class="game-container">
+      <canvas id="canvas" width="500" height="500"></canvas>
+    </div>
+
+    <footer>
+      Quam nulla porttitor massa id neque aliquam vestibulum? Fusce ut
+      placerat orci nulla pellentesque dignissim enim, sit amet venenatis
+      urna cursus eget nunc scelerisque viverra mauris, in aliquam sem
+      fringilla?
+    </footer>
+
+    <div class="modal" id="modal">
+      <div class="model-backdrop"></div>
+      <div class="modal-body">
+        <button class="modal-close" id="close">x</button>
+        <div class="modal-content">
+          <button class="number-buttons" value =4>4</button>
+          <button class="number-buttons"value =6>6</button>
+          <button class="number-buttons" value=8>8</button>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="modal-win">
+      <div class="model-backdrop"></div>
+      <div class="modal-body">
+        <button class="modal-close" id="close-win">x</button>
+        <div class="modal-content">
+          <h1>You Win</h1>
+          <div class="score">
+            <div class="scores-container" id="score-holder--win">0</div>
+            <div class="best-container" id="best-score--win">0</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="modal-lost">
+      <div class="model-backdrop"></div>
+      <div class="modal-body">
+        <button class="modal-close" id="close-lost">x</button>
+        <div class="modal-content">
+            <h1>You Lost</h1>
+          <div class="score">
+            <div class="scores-container" id="score-holder--lost">0</div>
+            <div class="best-container" id="best-score--lost">0</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="./js/cell.js"></script>
+  <script src="./js/layout_manager.js"></script>
+  <script src="./js/game_manager.js"></script>
+  <script src="./js/canvas_manager.js"></script>
+  <script src="./js/grid.js"></script>
+  <script src="./js/app.js"></script>
+</body>
+
+</html>

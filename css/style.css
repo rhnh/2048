@@ -1,0 +1,251 @@
+:root {
+  box-sizing: border-box;
+}
+
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
+body {
+  font-family: Helvetica, sans-serif, Ariel;
+  background-color: #333;
+  color: #776e65;
+}
+
+body * + * {
+  margin-top: 1em;
+}
+
+.container {
+  max-width: 500px;
+  margin: auto;
+}
+.headings {
+  display: flex;
+  margin-top: 2em;
+  
+}
+.logo >h1{
+display: block;
+}
+.logo{
+  background-color: #f67c5f;
+
+}
+
+.title {
+  background-color: #f67c5f;
+  /* padding: calc(1em - 0.5em); */
+  /* padding-left: 1em; */
+  /* line-height: baseline; */
+  letter-spacing: 0.2em;
+  padding:0.2em;;
+  padding-left:calc(1em - .5em);
+  margin: 0;
+  color: #fff;;
+  border-radius: 0.1em;
+  font-family: 'Curved Square';
+  font-size: 3em;
+  text-transform: bold;
+  float:left;
+  
+}
+@font-face {
+  font-family: 'Curved Square';
+  src: url("./curve.ttf");
+}
+.score {
+  margin-left: auto;
+}
+.scores-container,
+.best-container {
+  color: white;
+  font-size: 18px;
+  padding: 1.2em;
+  border-radius: 0.2em;
+  display: inline;
+  position: relative;
+  background-color: #bbada0;
+}
+
+.scores-container:after {
+  content: "Score";
+}
+.best-container:after {
+  content: "Best";
+}
+
+.scores-container:after,
+.best-container:after {
+  position: absolute;
+  width: 100%;
+  top: 10px;
+  left: 0;
+  text-transform: uppercase;
+  font-size: 13px;
+  line-height: 13px;
+  text-align: center;
+  color: #eee4da;
+}
+
+#canvas {
+  width: 500px;
+  height: 500px;
+  background-color: #bbada0;
+  border-radius: 0.2em;
+  font-family: 'Curved Square';
+
+}
+.game-intro {
+  display: flex;
+  margin-top: 1.5em;
+}
+
+.subtitle {
+  padding: 0;
+  margin: 0;
+}
+.restart-button {
+  background-color: #f67c5f;
+  background-color:#;
+  border-radius: 0.2em;
+  margin: 0.2em;
+  margin-right: 0;
+  padding: 0.5em;
+  text-align: center;
+  margin-left: auto;
+  cursor: pointer;
+  color:white;
+}
+.restart-button:hover {
+  text-decoration: underline;
+}
+
+.above-game {
+  display: inline;
+}
+.modal {
+  display: none;
+}
+
+.model-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.modal-body {
+  position: fixed;
+  top: 8em;
+  bottom: 8em;
+  right: 30%;
+  left: 30%;
+  padding: 6em 2em;
+  background-color: #eee;
+  overflow: auto;
+}
+.modal-close {
+  cursor: pointer;
+  position: absolute;
+  right: 0.2em;
+  top: 0.2em;
+  background-color: transparent;
+  border: 0;
+  height: 1em;
+  width: 1em;
+  text-indent: 10em;
+  overflow: hidden;
+  font-size: 2em;
+}
+.modal-close::after {
+  position: absolute;
+  line-height: 0.5;
+  top: 0.2em;
+  left: 0.1em;
+  text-indent: 0;
+  content: "\00D7";
+}
+
+.modal-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* You can set flex-wrap and
+      flex-direction individually */
+  flex-direction: row;
+  flex-wrap: wrap;
+  /* Or do it all in one line
+     with flex flow */
+  flex-flow: row wrap;
+  /* tweak where items line
+      up on the row
+      valid values are: flex-start,
+      flex-end, space-between,
+      space-around, stretch */
+  border: 1px solid #ddd;
+
+  padding: 1.5em;
+}
+.modal-content > .number-buttons {
+  margin: 20px;
+  border: 0;
+  width: 75px;
+  height: 76px;
+  margin-top: 0;
+  color: #776e65;
+  background-color: #bbada0;
+  margin-top: 1.5em;
+}
+
+.modal-content > .number-buttons:hover {
+  color: orange;
+  background-color: #333;
+}
+@media screen and (max-width: 300px) {
+    #canvas {
+      width: 250px;
+      height: 250px;
+      margin: auto;
+      font-family: 'Curved Square';
+
+    }
+    .game-container {
+      margin: auto;
+      padding:0;
+    }
+    body{
+      padding:0;
+    }
+    .container {
+      margin: auto;
+      margin: 0 0em;
+      padding: 0;
+    }
+    .title {
+      background-color: orange;
+      letter-spacing: 0em;
+     
+      padding: 0;
+    }
+  }
+  
+@media screen and (max-width: 600px) {
+  #canvas {
+    width: 300px;
+    height: 300px;
+    background-color: #bbada0;
+    border-radius: 0.2em;
+    margin: auto;
+  }
+  .game-container {
+    margin: auto;
+    padding:0;
+  }
+  .container {
+    margin: aut o;
+    margin: 0 0em;
+  }
+}

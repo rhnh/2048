@@ -1,0 +1,3 @@
+- replicating 2048 game
+* TODO
+- removing/refactoring multiple for loops and / html modals
