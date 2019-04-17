@@ -24,14 +24,12 @@ body * + * {
 .headings {
   display: flex;
   margin-top: 2em;
-  
 }
-.logo >h1{
-display: block;
+.logo > h1 {
+  display: block;
 }
-.logo{
+.logo {
   background-color: #f67c5f;
-
 }
 
 .title {
@@ -40,20 +38,21 @@ display: block;
   /* padding-left: 1em; */
   /* line-height: baseline; */
   letter-spacing: 0.2em;
-  padding:0.2em;;
-  padding-left:calc(1em - .5em);
+  padding: 0.1em;
+  padding-left: calc(1em - 0.5em);
   margin: 0;
-  color: #fff;;
-  border-radius: 0.1em;
-  font-family: 'Curved Square';
-  font-size: 3em;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  color: #fffaf6;
+  border-radius: 2em;
+  font-family: "TACO BOX";
+  font-size: 1.6em;
   text-transform: bold;
-  float:left;
-  
+  float: left;
 }
 @font-face {
-  font-family: 'Curved Square';
-  src: url("./curve.ttf");
+  font-family: "TACO BOX";
+  src: url("./TACOBOX_.TTF");
 }
 .score {
   margin-left: auto;
@@ -94,12 +93,11 @@ display: block;
   height: 500px;
   background-color: #bbada0;
   border-radius: 0.2em;
-  font-family: 'Curved Square';
-
+  font-family: "Curved Square";
 }
 .game-intro {
   display: flex;
-  margin-top: 1.5em;
+  margin-top: 1em;
 }
 
 .subtitle {
@@ -108,7 +106,7 @@ display: block;
 }
 .restart-button {
   background-color: #f67c5f;
-  background-color:#;
+  background-color: #;
   border-radius: 0.2em;
   margin: 0.2em;
   margin-right: 0;
@@ -116,7 +114,7 @@ display: block;
   text-align: center;
   margin-left: auto;
   cursor: pointer;
-  color:white;
+  color: white;
 }
 .restart-button:hover {
   text-decoration: underline;
@@ -205,33 +203,32 @@ display: block;
   background-color: #333;
 }
 @media screen and (max-width: 300px) {
-    #canvas {
-      width: 250px;
-      height: 250px;
-      margin: auto;
-      font-family: 'Curved Square';
-
-    }
-    .game-container {
-      margin: auto;
-      padding:0;
-    }
-    body{
-      padding:0;
-    }
-    .container {
-      margin: auto;
-      margin: 0 0em;
-      padding: 0;
-    }
-    .title {
-      background-color: orange;
-      letter-spacing: 0em;
-     
-      padding: 0;
-    }
+  #canvas {
+    width: 250px;
+    height: 250px;
+    margin: auto;
+    font-family: "Curved Square";
   }
-  
+  .game-container {
+    margin: auto;
+    padding: 0;
+  }
+  body {
+    padding: 0;
+  }
+  .container {
+    margin: auto;
+    margin: 0 0em;
+    padding: 0;
+  }
+  .title {
+    background-color: orange;
+    letter-spacing: 0em;
+
+    padding: 0;
+  }
+}
+
 @media screen and (max-width: 600px) {
   #canvas {
     width: 300px;
@@ -242,7 +239,7 @@ display: block;
   }
   .game-container {
     margin: auto;
-    padding:0;
+    padding: 0;
   }
   .container {
     margin: aut o;
