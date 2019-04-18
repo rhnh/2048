@@ -11,12 +11,43 @@
     <div class="container">
       <div class="headings">
         <div class="logo">
-          <div>
-            <h1 class="title">20</h1>
-          </div>
-          <div>
-            <h1 class="title">48</h1>
-          </div>
+          <svg
+            version="1.1"
+            baseProfile="full"
+            width="100"
+            height="100"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <style>
+              .svgFonts {
+                font: 25px sans-serif;
+                fill: #ffffff;
+              }
+            </style>
+            <defs>
+              <g id="rectangle">
+                <rect
+                  x="1px"
+                  y="1px"
+                  width="48px"
+                  height="48px"
+                  style=" stroke:#fff; stroke-width: 3px"
+                ></rect>
+              </g>
+              <g id="numbers">
+                <
+              </g>
+            </defs>
+            <use href="#rectangle" x="0" y="3" fill="#f2b179"></use>
+
+            <use href="#rectangle" x="50" y="3" fill="#f59563"></use>
+            <use href="#rectangle" x="0" y="50" fill="#f67c5f"></use>
+            <use href="#rectangle" x="50" y="50" fill="#f65e3b"></use>
+            <text x="20" y="35" class="svgFonts">2</text>
+            <text x="70" y="35" class="svgFonts">0</text>
+            <text x="20" y="85" class="svgFonts">4</text>
+            <text x="70" y="85" class="svgFonts">8</text>
+          </svg>
         </div>
         <div class="score">
           <div class="scores-container" id="score-holder">0</div>

@@ -23,11 +23,9 @@ body * + * {
 }
 .headings {
   display: flex;
-  margin-top: 2em;
+  margin-top: 1em;
 }
-.logo > h1 {
-  display: block;
-}
+
 .logo {
   background-color: #f67c5f;
 }
@@ -45,15 +43,15 @@ body * + * {
   padding-bottom: 0.2em;
   color: #fffaf6;
   border-radius: 2em;
-  font-family: "TACO BOX";
+  /* font-family: "TACO BOX"; */
   font-size: 1.6em;
   text-transform: bold;
   float: left;
 }
-@font-face {
+/* @font-face {
   font-family: "TACO BOX";
   src: url("./TACOBOX_.TTF");
-}
+} */
 .score {
   margin-left: auto;
 }
@@ -93,7 +91,7 @@ body * + * {
   height: 500px;
   background-color: #bbada0;
   border-radius: 0.2em;
-  font-family: "Curved Square";
+  /* font-family: "Curved Square"; */
 }
 .game-intro {
   display: flex;
@@ -106,7 +104,6 @@ body * + * {
 }
 .restart-button {
   background-color: #f67c5f;
-  background-color: #;
   border-radius: 0.2em;
   margin: 0.2em;
   margin-right: 0;
@@ -207,7 +204,7 @@ body * + * {
     width: 250px;
     height: 250px;
     margin: auto;
-    font-family: "Curved Square";
+    /* font-family: "Curved Square"; */
   }
   .game-container {
     margin: auto;
