@@ -14,15 +14,12 @@
           <svg
             version="1.1"
             baseProfile="full"
-            width="100"
+            width="102"
             height="100"
             xmlns="http://www.w3.org/2000/svg"
           >
             <style>
-              .svgFonts {
-                font: 25px sans-serif;
-                fill: #ffffff;
-              }
+              @import url("./css/svg-style.css");
             </style>
             <defs>
               <g id="rectangle">
@@ -38,11 +35,11 @@
                 <
               </g>
             </defs>
-            <use href="#rectangle" x="0" y="3" fill="#f2b179"></use>
+            <use href="#rectangle" x="1" y="3" fill="#f2b179"></use>
 
-            <use href="#rectangle" x="50" y="3" fill="#f59563"></use>
-            <use href="#rectangle" x="0" y="50" fill="#f67c5f"></use>
-            <use href="#rectangle" x="50" y="50" fill="#f65e3b"></use>
+            <use href="#rectangle" x="51" y="3" fill="#f59563"></use>
+            <use href="#rectangle" x="1" y="50" fill="#f67c5f"></use>
+            <use href="#rectangle" x="51" y="50" fill="#f65e3b"></use>
             <text x="20" y="35" class="svgFonts">2</text>
             <text x="70" y="35" class="svgFonts">0</text>
             <text x="20" y="85" class="svgFonts">4</text>
@@ -57,31 +54,37 @@
 
       <div class="game-intro">
         <h2 class="subtitle">
-          Play
+          
           <strong
-            ><span
-              style="text-decoration:underline; margin:.2em; color:#f67c5f;"
-              >2048</span
-            >Game</strong
           >
-          Online
-        </h2>
-        <a class="restart-button" id="restart">New Game</a>
+          <span
+          style=" margin:.2em; color:#f67c5f;"
+          > Play
+        </strong>
+        
+        Online
+      </h2>
+      <a class="restart-button" id="restart">New Game</a>
+    </div>
+    
+    <div class="above-game">
+      <p>Move the numbers and get to the <strong>2048 tile!</strong></p>
+        <a href="https://github.com/gabrielecirulli/2048" style="text-decoration: underline; color:#f67c5f">Original</a></span>  
+      by Gabriele Cirulli
       </div>
-
-      <div class="above-game">
-        <p>Join the numbers and get to the <strong>2048 tile!</strong></p>
-      </div>
-
-      <div class="game-container">
-        <canvas id="canvas" width="500" height="500"></canvas>
-      </div>
-      <footer>
-        At the end got lazy start copy pasting. Need to be refactored. Font <
-      </footer>
-
-      <div class="modal" id="modal">
-        <div class="model-backdrop"></div>
+    
+    <div class="game-container">
+      <canvas id="canvas" width="400" height="400"></canvas>
+    </div>
+    <footer>
+      At the end got lazy start copy pasting. Need to be refactored. Font &nbsp;
+      <a style="text-decoration: none; color:#f67c5f"
+      href="https://www.dafont.com/de/lcd-lcd-mono.font?fpp=50&text=1234566"
+      >dafont</a
+    </footer>
+    
+    <div class="modal" id="modal">
+      <div class="model-backdrop"></div>
         <div class="modal-body">
           <button class="modal-close" id="close">x</button>
           <div class="modal-content">

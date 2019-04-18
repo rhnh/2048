@@ -1,0 +1,9 @@
+.svgFonts {
+  font-family: "LCD";
+  font-size: 25px;
+  fill: #ffffff;
+}
+@font-face {
+  font-family: "LCD";
+  src: url("./LCD2L___.TTF");
+}
