@@ -243,3 +243,9 @@ body * + * {
     margin: 0 0em;
   }
 }
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
