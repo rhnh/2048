@@ -8,7 +8,7 @@ function GameManager() {
   this.status = false;
 }
 GameManager.prototype = {
-  setGame: function(lent = 4) {
+  setGame: function (lent = 4) {
     this.layout = new Layout();
     this.layout.setLayout(
       "restart",
@@ -37,29 +37,29 @@ GameManager.prototype = {
       this.layout.bestHolder.innerHTML = this.bestScore();
     }
   },
-  setList: function(l) {
+  setList: function (l) {
     this.list = l;
   },
-  setCanvasManager: function() {
+  setCanvasManager: function () {
     this.canvasManager = new CanvasManager();
     this.canvasManager.setCanvas(this.canvas);
     this.canvasManager.drawAllCells(this.list);
   },
-  getCanasManager: function() {
+  getCanasManager: function () {
     return this.canvasManager;
   },
-  bestScore: function() {
+  bestScore: function () {
     if (typeof Storage !== "undefined") {
       if (localStorage.getItem("bestScore") < this.layout.getGrid().getScore())
         localStorage.setItem("bestScore", this.layout.getGrid().getScore());
     }
     return localStorage.getItem("bestScore");
   },
-  setKeys: function(global) {
+  setKeys: function (global) {
     let self = this;
     global.addEventListener(
       "keydown",
-      function(e) {
+      function (e) {
         if (e.deflautPrevented) {
           return;
         }
@@ -85,7 +85,7 @@ GameManager.prototype = {
     );
     return this;
   },
-  movement: function(code) {
+  movement: function (code) {
     if (
       !this.layout.getGrid().checkForPairsVertical() &&
       !this.layout.getGrid().checkForPairsHorizontal() &&
@@ -143,24 +143,24 @@ GameManager.prototype = {
   },
   setButtonAction: function setButtonAction() {
     let self = this;
-    self.layout.restartButton.addEventListener("click", function() {
+    self.layout.restartButton.addEventListener("click", function () {
       self.layout.modal.classList.toggle("modal");
     });
-    self.layout.closeButton.addEventListener("click", function() {
+    self.layout.closeButton.addEventListener("click", function () {
       self.layout.modal.classList.toggle("modal");
     });
 
-    self.layout.closeWinButton.addEventListener("click", function() {
+    self.layout.closeWinButton.addEventListener("click", function () {
       self.layout.modalWin.style.display = "none";
       document.location.reload();
     });
-    self.layout.closeLostButton.addEventListener("click", function() {
+    self.layout.closeLostButton.addEventListener("click", function () {
       self.layout.modalLost.style.display = "none";
       document.location.reload();
     });
 
-    self.layout.numberButtons.forEach(function(buttons) {
-      buttons.addEventListener("click", function() {
+    self.layout.numberButtons.forEach(function (buttons) {
+      buttons.addEventListener("click", function () {
         self.layout.modal.classList.toggle("modal");
       });
     });
@@ -168,11 +168,11 @@ GameManager.prototype = {
     return this;
   },
 
-  restart: function() {
+  restart: function () {
     let self = this;
-    self.layout.numberButtons.forEach(function(buttons) {
-      buttons.addEventListener("click", function() {
-        self.liseSize = buttons.value;
+    self.layout.numberButtons.forEach(function (buttons) {
+      buttons.addEventListener("click", function () {
+        self.listSize = buttons.value;
         self.setGame(buttons.value);
         self.setKeys(window);
         self.keyManager();
@@ -182,5 +182,5 @@ GameManager.prototype = {
         self.canvasManager.drawAllCells(self.list);
       });
     });
-  }
+  },
 };

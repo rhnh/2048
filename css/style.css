@@ -7,13 +7,14 @@
 ::after {
   box-sizing: inherit;
 }
+
 body {
   font-family: Helvetica, sans-serif, Ariel;
   background-color: #333;
   color: #776e65;
 }
 
-body * + * {
+body *+* {
   margin-top: 1em;
 }
 
@@ -21,6 +22,7 @@ body * + * {
   max-width: 500px;
   margin: auto;
 }
+
 .headings {
   display: flex;
   margin-top: 1em;
@@ -48,6 +50,7 @@ body * + * {
   text-transform: bold;
   float: left;
 }
+
 /* @font-face {
   font-family: "TACO BOX";
   src: url("./TACOBOX_.TTF");
@@ -55,6 +58,7 @@ body * + * {
 .score {
   margin-left: auto;
 }
+
 .scores-container,
 .best-container {
   color: white;
@@ -69,6 +73,7 @@ body * + * {
 .scores-container:after {
   content: "Score";
 }
+
 .best-container:after {
   content: "Best";
 }
@@ -93,6 +98,7 @@ body * + * {
   border-radius: 0.2em;
   /* font-family: "Curved Square"; */
 }
+
 .game-intro {
   display: flex;
   margin-top: 1em;
@@ -102,6 +108,7 @@ body * + * {
   padding: 0;
   margin: 0;
 }
+
 .restart-button {
   background-color: #f67c5f;
   border-radius: 0.2em;
@@ -112,14 +119,18 @@ body * + * {
   margin-left: auto;
   cursor: pointer;
   color: white;
+
 }
+
 .restart-button:hover {
   text-decoration: underline;
+  box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
 
 .above-game {
   display: inline;
 }
+
 .modal {
   display: none;
 }
@@ -132,6 +143,7 @@ body * + * {
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.7);
 }
+
 .modal-body {
   position: fixed;
   top: 8em;
@@ -142,6 +154,7 @@ body * + * {
   background-color: #eee;
   overflow: auto;
 }
+
 .modal-close {
   cursor: pointer;
   position: absolute;
@@ -155,6 +168,7 @@ body * + * {
   overflow: hidden;
   font-size: 2em;
 }
+
 .modal-close::after {
   position: absolute;
   line-height: 0.5;
@@ -184,7 +198,8 @@ body * + * {
 
   padding: 1.5em;
 }
-.modal-content > .number-buttons {
+
+.modal-content>.number-buttons {
   margin: 20px;
   border: 0;
   width: 75px;
@@ -195,10 +210,11 @@ body * + * {
   margin-top: 1.5em;
 }
 
-.modal-content > .number-buttons:hover {
+.modal-content>.number-buttons:hover {
   color: orange;
   background-color: #333;
 }
+
 @media screen and (max-width: 300px) {
   #canvas {
     width: 250px;
@@ -206,18 +222,22 @@ body * + * {
     margin: auto;
     /* font-family: "Curved Square"; */
   }
+
   .game-container {
     margin: auto;
     padding: 0;
   }
+
   body {
     padding: 0;
   }
+
   .container {
     margin: auto;
     margin: 0 0em;
     padding: 0;
   }
+
   .title {
     background-color: orange;
     letter-spacing: 0em;
@@ -234,18 +254,22 @@ body * + * {
     border-radius: 0.2em;
     margin: auto;
   }
+
   .game-container {
     margin: auto;
     padding: 0;
   }
+
   .container {
     margin: aut o;
     margin: 0 0em;
   }
 }
+
 a {
   text-decoration: none;
 }
+
 a:hover {
   text-decoration: underline;
 }

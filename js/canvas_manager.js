@@ -3,11 +3,11 @@ function CanvasManager() {
 }
 
 CanvasManager.prototype = {
-  setCanvas: function(c) {
+  setCanvas: function (c) {
     this.canvas = c;
   },
 
-  drawAllCells: function(list) {
+  drawAllCells: function (list) {
     if (list === null) {
       return;
     }
@@ -68,7 +68,7 @@ CanvasManager.prototype = {
         }
         ctx.fill();
         if (cell.value) {
-          let fontSize = cell.getWidth() / 2;
+          let fontSize = cell.getWidth() / 4;
           ctx.font = fontSize + "px Ariel";
 
           ctx.fillStyle = "#fff";
@@ -76,15 +76,15 @@ CanvasManager.prototype = {
           ctx.fillText(
             cell.value,
             cell.x * cell.getWidth() + cell.getWidth() / 2 + 5,
-            cell.y * cell.getWidth() + cell.getWidth() / 2 + 25
+            cell.y * cell.getWidth() + cell.getWidth() / 2 + fontSize / 2
           );
         }
         ctx.closePath();
       }
     }
   },
-  clearCanvas: function() {
+  clearCanvas: function () {
     let ctx = this.canvas.getContext("2d");
     ctx.clearRect(0, 0, this.canvas.width, this.canvas.width);
-  }
+  },
 };
